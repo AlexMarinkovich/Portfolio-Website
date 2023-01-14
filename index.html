@@ -14,6 +14,7 @@
     <title>Alex Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/19e3348092.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -34,9 +35,9 @@
         <img class="selfie" src="images/selfie.png">
         <div class="my-links">
             <ul>
-                <li><a href = "https://github.com/AlexMarinkovich"><span style="color: gold;"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href = "https://www.linkedin.com/in/alex-marinkovich/"><span style="color: gold;"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href = "mailto:alex-989@live.com"><span style="color: gold;"><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href = "https://github.com/AlexMarinkovich"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href = "https://www.linkedin.com/in/alex-marinkovich/"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href = "mailto:alex-989@live.com"><i class="fa-solid fa-envelope"></i></a></li>
             </ul>
         </div>
     </div>
@@ -55,8 +56,8 @@
                     <p>I am a Queens University student & self-learner who is passionate about computer science and math. 
                         As a student, I value a deep understanding and the ability to think creatively. 
                         This is reflected in my dedication to tackling challenging coding problems and brainstorming strategies with others. 
-                        My work ethic, adaptability, and innovative mindset allow me to thrive in both independent and cooperative environments. 
-                        To further my learning, I am looking to do a summer internship to apply my technical skills in the real world.</p>
+                        With the spare time I have available between my university commitments and team obligations,
+                        I enjoy working on game development, web development, and solving coding problems.</p>
                 </div>
                 
                 <div class="tab-titles">
@@ -74,7 +75,7 @@
                 <div class="tab-contents" id="experience">
                     <ul>
                         <li><span>Queens Space Engineering Team Member (2022 - Present)</span><br>Worked with the comms team to design a graphical user interface using the PyQt5 library that sends commands and receives data, such as pictures, from our satellite.</li>
-                        <li><span>QHacks (2023)</span><br>This January, I will participate in Queens University’s official Hackathon by cooperating with a team and applying my programming skills to a project for a weekend</li>
+                        <li><span>QHacks (2023)</span><br>This January, I will participate in Queens University’s official Hackathon by cooperating with a team and applying my programming skills to a project for a weekend.</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -95,65 +96,41 @@
         <h1 class="sub-title">My Projects</h1>
     </div>
 
-    <div class="projects-list">
+    <div class="project-list">
         <img class="project-image active-image" onclick="showproject('the-detonator')" src="images/the-detonator-logo.png">
-        <img class="project-image" onclick="showproject('project-2')" src="images/airstrike-clip.gif">
-        <img class="project-image" onclick="showproject('project-3')" src="images/work-1.png">
+        <img class="project-image" onclick="showproject('maze-runner')" src="images/maze-runner-logo.png">
+        <img class="project-image" onclick="showproject('geometry-wars')" src="images/geometry-wars-logo.png">
         <img class="project-image" onclick="showproject('airstrike')" src="images/airstrike-logo.png">
-        <img class="project-image" onclick="showproject('project-5')" src="images/the-detonator-logo.png">
     </div>
 
     <div class="project-desc active-desc" id="the-detonator">
-        <img class="desc-gif" src="images/airstrike-clip.gif">
+        <img class="desc-gif" src="images/the-detonator-clip.gif">
         <div class="desc-text">
-            <p>Hello</p>
+            <p><span>The Detonator</span><br>A physics game featuring levels in which the player must use the blast waves of explosives to launch themself through tricky terrain.</p>
         </div>
+    </div>
+
+    <div class="project-desc" id="maze-runner">
+        <img class="desc-gif" src="images/maze-runner-clip.gif">
+        <div class="desc-text">
+            <p><span>Maze Runner</span><br>A game in which you run through randomly generated mazes to the finish line. Each maze features a starting point, an endpoint, and doors throughout. Race against the clock, another person, or the computer, and save your highscores.</p>
+        </div>
+    </div>
+
+    <div class="project-desc" id="geometry-wars">
+        <img class="desc-gif" src="images/geometry-wars-clip.gif">
+        <div class="desc-text">
+            <p><span>Geometry Wars</span><br>A recreation of the real geometry wars game, with a twist! Survive as long as you can against the endless waves of enemies, some of which are unique from the real game.</p>
+        </div>
+    </div>
 
     <div class="project-desc" id="airstrike">
         <img class="desc-gif" src="images/airstrike-clip.gif">
         <div class="desc-text">
-            <p>Hello help</p>
+            <p><span>Airstrike</span><br>Control a tank and survive as long as you can throughout the airstrike.</p>
         </div>
-
-    
-
-    
-
-
-
-    
-        
     </div>
 </div>
 
-
-<script>
-    const tablinks = document.getElementsByClassName("tab-links")
-    const tabcontents = document.getElementsByClassName("tab-contents")
-    
-    function opentab(tabname){
-        for(tablink of tablinks) {tablink.classList.remove("active-link")}
-        for(tabcontent of tabcontents) {tabcontent.classList.remove("active-tab")}
-
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab")
-    }
-
-    const projectimages = document.getElementsByClassName("project-image")
-    const projectdescs = document.getElementsByClassName("project-desc")
-    
-    function showproject(id){
-        for(image of projectimages) {image.classList.remove("active-image")}
-        for(desc of projectdescs) {desc.classList.remove("active-desc")}
-
-        event.currentTarget.classList.add("active-image")
-        document.getElementById(id).classList.add("active-desc")
-    }
-
-
-
-</script>
-
 </body>
 </html>
-
