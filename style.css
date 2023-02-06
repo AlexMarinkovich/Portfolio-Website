@@ -180,6 +180,10 @@ nav ul li a:hover::after{
     color: gold;
 }
 
+.tab-contents a:link, a:visited{
+    color: gold;
+}
+
 .tab-contents{
     display: none;
 }
